@@ -2,13 +2,13 @@ const {Schema} = require('mongoose')
 
 const Course = new Schema({
 
-    code: {
+    name: {
         type: String,
         trim: true,
         index: true,
     },
 
-    name: {
+    url: {
         type: String,
         trim: true,
         index: true,
@@ -31,12 +31,6 @@ const Course = new Schema({
     created_at: {
         type: Date,
         default: Date.now,
-        index: true,
-    },
-
-    site_id: {
-        type: Schema.Types.ObjectId,
-        ref: 'Site',
         index: true,
     },
 

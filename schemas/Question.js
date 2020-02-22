@@ -1,6 +1,6 @@
 const {Schema} = require('mongoose')
 
-const Course = new Schema({
+const Question = new Schema({
 
     code: {
         type: String,
@@ -44,7 +44,7 @@ const Course = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Quiz',
         index: true,
-    }
+    },
 })
 
-module.exports = User
+module.exports = Question
