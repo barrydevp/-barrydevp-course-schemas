@@ -20,7 +20,7 @@ const Course = new Schema({
         trim: true,
         required: true,
         default: 'created',
-        enum: ['created', 'updated'],
+        enum: ['created', 'updated', 'crawler'],
     },
 
     updated_at: {
