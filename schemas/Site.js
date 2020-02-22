@@ -12,6 +12,7 @@ const Course = new Schema({
         type: String,
         trim: true,
         index: true,
+        required: true,
     },
 
     status: {

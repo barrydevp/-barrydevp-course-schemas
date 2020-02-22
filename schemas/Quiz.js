@@ -6,6 +6,7 @@ const Quiz = new Schema({
         type: String,
         trim: true,
         index: true,
+        required: true,
     },
 
     name: {
@@ -38,6 +39,7 @@ const Quiz = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Course',
         index: true,
+        required: true,
     },
 })
 

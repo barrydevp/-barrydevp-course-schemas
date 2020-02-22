@@ -6,6 +6,7 @@ const Course = new Schema({
         type: String,
         trim: true,
         index: true,
+        required: true,
     },
 
     name: {
@@ -38,6 +39,7 @@ const Course = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Site',
         index: true,
+        required: true,
     },
 
 })
