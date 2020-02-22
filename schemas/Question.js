@@ -1,0 +1,50 @@
+const {Schema} = require('mongoose')
+
+const Course = new Schema({
+
+    code: {
+        type: String,
+        trim: true,
+        index: true,
+    },
+
+    content: {
+        type: String,
+        trim: true,
+        index: true,
+    },
+
+    answer: {
+        type: String,
+        trim: true,
+        index: true,
+    },
+
+    status: {
+        type: String,
+        trim: true,
+        required: true,
+        default: 'created',
+        enum: ['created', 'updated'],
+    },
+
+    updated_at: {
+        type: Date,
+        default: Date.now,
+        index: true,
+    },
+
+    created_at: {
+        type: Date,
+        default: Date.now,
+        index: true,
+    },
+
+    quiz_id: {
+        type: Schema.Types.ObjectId,
+        ref: 'Quiz',
+        index: true,
+    }
+})
+
+module.exports = User
